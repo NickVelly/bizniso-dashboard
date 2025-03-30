@@ -4,16 +4,17 @@ import { useSelector } from 'react-redux'
 
 import { CSpinner, useColorModes } from '@coreui/react'
 import './scss/style.scss'
-
-// We use those styles to show code examples, you should remove them in your application.
 import './scss/examples.scss'
 
-// Containers
+// Layout
 const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
 
-// Pages
-const Login = React.lazy(() => import('./views/pages/login/Login'))
-const Register = React.lazy(() => import('./views/pages/register/Register'))
+// Stranice van layouta
+const Prijava = React.lazy(() => import('./views/prijava/Prijava'))
+//const Registracija = React.lazy(() => import('./views/registracija/Registracija'))
+const LandingPage = React.lazy(() => import('./views/landing/LandingPage'))
+const OnBoarding = React.lazy(() => import('./views/onboarding/OnboardingForm'))
+// Error stranice
 const Page404 = React.lazy(() => import('./views/pages/page404/Page404'))
 const Page500 = React.lazy(() => import('./views/pages/page500/Page500'))
 
@@ -45,10 +46,14 @@ const App = () => {
         }
       >
         <Routes>
-          <Route exact path="/login" name="Login Page" element={<Login />} />
-          <Route exact path="/register" name="Register Page" element={<Register />} />
+          {/* Stranice bez layouta */}
+          <Route exact path="/" name="Landing Page" element={<LandingPage />} />
+          <Route exact path="/prijava" name="Prijava" element={<Prijava />} />
+          <Route exact path="/onboarding" name="OnBoarding" element={<LandingPage />} />
           <Route exact path="/404" name="Page 404" element={<Page404 />} />
           <Route exact path="/500" name="Page 500" element={<Page500 />} />
+
+          {/* Sve ostalo ide kroz layout */}
           <Route path="*" name="Home" element={<DefaultLayout />} />
         </Routes>
       </Suspense>

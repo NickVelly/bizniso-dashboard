@@ -54,14 +54,23 @@ const AppHeader = () => {
         <CHeaderNav className="d-none d-md-flex">
           <CNavItem>
             <CNavLink to="/dashboard" as={NavLink}>
-              Dashboard
+              Почетна
             </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">Users</CNavLink>
+            <CNavLink to="/invoices" as={NavLink}>
+              Фактуре
+            </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
+            <CNavLink to="/clients" as={NavLink}>
+              Клијенти
+            </CNavLink>
+          </CNavItem>
+          <CNavItem>
+            <CNavLink to="/reports" as={NavLink}>
+              Извештаји
+            </CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="ms-auto">
@@ -103,7 +112,7 @@ const AppHeader = () => {
                 type="button"
                 onClick={() => setColorMode('light')}
               >
-                <CIcon className="me-2" icon={cilSun} size="lg" /> Light
+                <CIcon className="me-2" icon={cilSun} size="lg" /> Светли режим
               </CDropdownItem>
               <CDropdownItem
                 active={colorMode === 'dark'}
@@ -112,7 +121,7 @@ const AppHeader = () => {
                 type="button"
                 onClick={() => setColorMode('dark')}
               >
-                <CIcon className="me-2" icon={cilMoon} size="lg" /> Dark
+                <CIcon className="me-2" icon={cilMoon} size="lg" /> Тамни режим
               </CDropdownItem>
               <CDropdownItem
                 active={colorMode === 'auto'}
@@ -121,7 +130,7 @@ const AppHeader = () => {
                 type="button"
                 onClick={() => setColorMode('auto')}
               >
-                <CIcon className="me-2" icon={cilContrast} size="lg" /> Auto
+                <CIcon className="me-2" icon={cilContrast} size="lg" /> Аутоматски
               </CDropdownItem>
             </CDropdownMenu>
           </CDropdown>

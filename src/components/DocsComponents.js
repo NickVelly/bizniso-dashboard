@@ -12,27 +12,22 @@ const DocsComponents = (props) => (
           src={ComponentsImg}
           width="160px"
           height="160px"
-          alt="CoreUI PRO hexagon"
+          alt="Bizniso"
         />
       </div>
       <div className="col-md col-12 px-lg-4">
-        Our Admin Panel isn’t just a mix of third-party components. It’s{' '}
-        <strong>
-          the only open-source React dashboard built on a professional, enterprise-grade UI
-          Components Library
-        </strong>
-        . This component is part of this library, and we present only the basic usage of it here. To
-        explore extended examples, detailed API documentation, and customization options, refer to
-        our docs.
+        <strong>Bizniso</strong> апликација је изграђена на модерним технологијама и пружа све што је потребно
+        за управљање малим бизнисом – од фактурисања до извештаја.
+        Ова компонента је пример интерфејса који ћеш користити у свом пословању.
       </div>
       <div className="col-md-auto col-12 mt-3 mt-lg-0">
         <a
           className="btn btn-primary text-nowrap text-white"
-          href={`https://coreui.io/react/docs/${props.href}`}
+          href="https://bizniso.rs/dokumentacija" // ако немаш документацију, можеш оставити '#'
           target="_blank"
           rel="noopener noreferrer"
         >
-          Explore Documentation
+          Погледај документацију
         </a>
       </div>
     </div>
